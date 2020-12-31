@@ -1,7 +1,7 @@
 [Heroku Buildpack](https://devcenter.heroku.com/articles/buildpacks) for [Kong](https://getkong.org/about/)
 =========================
 
-Deploy [Kong 1.1.0rc2](https://konghq.com) as a Heroku app.
+Deploy [Kong 2.2.1rc](https://konghq.com) as a Heroku app.
 
 🔬👩‍💻 This software is a community proof-of-concept: [MIT license](LICENSE)
 
@@ -30,7 +30,7 @@ mkdir $APP_NAME
 cd $APP_NAME
 git init
 heroku create $APP_NAME
-heroku buildpacks:set https://github.com/heroku/heroku-buildpack-kong.git#kong-1.1.0
+heroku buildpacks:set https://github.com/jrondon/heroku-buildpack-kong.git#kong-2.2.1
 heroku addons:create heroku-postgresql:hobby-dev
 ```
 
@@ -76,7 +76,7 @@ git push heroku master
     * `KONG_GIT_URL` git repo URL for Kong source
       * default: `https://github.com/kong/kong.git`
     * `KONG_GIT_COMMITISH` git branch/tag/commit for Kong source
-      * default: `1.1.0rc2`
+      * default: `2.2.1rc`
 
 
 #### Using Environment Variables in Plugins
